@@ -26,7 +26,7 @@ session_start();
             <a href="./about.php" class="nav-link active" aria-current="page" href="#">Tentang</a>
           </li>
         </ul>
-        <p class="mb-0 me-3"><?= $_SESSION['email'] ?></p>
+        <p class="mb-0 me-3"><?= $_SESSION['username'] ?></p>
         <a href="./logout.php" class="btn btn-danger">Logout</a>
       </div>
     </div>

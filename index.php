@@ -10,14 +10,14 @@ if(isset($_SESSION['status'])) {
   }
 }
 
-if(isset($_POST['email'])) {
-  if($_POST['email'] == 'admin@gmail.com' && $_POST['password'] == 'password') {
-    $_SESSION['email'] = "admin@gmail.com";
+if(isset($_POST['username'])) {
+  if($_POST['username'] == 'day' && $_POST['password'] == 'day') {
+    $_SESSION['username'] = "day";
     $_SESSION['role'] = 'admin';
     $_SESSION['status'] = "login";
     header("Location:./admin.php");
-  } else if($_POST['email'] == 'user@gmail.com' && $_POST['password'] == 'password') {
-    $_SESSION['email'] = "user@gmail.com";
+  } else if($_POST['username'] == 'user' && $_POST['password'] == 'user') {
+    $_SESSION['username'] = "user";
     $_SESSION['role'] = 'user';
     $_SESSION['status'] = "login";
     header("Location:./user.php");
@@ -46,8 +46,8 @@ if(isset($_POST['email'])) {
       <div class="card-body">
         <form action="" method="POST">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
